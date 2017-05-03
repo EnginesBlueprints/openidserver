@@ -1,0 +1,159 @@
+{
+  "schema": {
+    "type": "app_blueprint",
+    "version": {
+      "major": 1,
+      "minor": 0
+    },
+    "origin": "Engines Developer Studio 0.2"
+  },
+  "metadata": {
+    "blueprint": {
+      "version": {
+        "major": 0,
+        "minor": 0,
+        "level": "alpha",
+        "patch": 0
+      }
+    },
+    "software": {
+      "display": {
+        "title": "",
+        "label": "",
+        "version": "",
+        "description": "",
+        "url": ""
+      },
+      "license": {
+        "label": "",
+        "url": ""
+      }
+    },
+    "timestamp": "2017-05-03 04:25:22 UTC"
+  },
+  "software": {
+    "base": {
+      "name": "openconnectid",
+      "framework": "rails5",
+      "deployment_type": "web",
+      "http_protocol": "https_only",
+      "framework_port_override": "",
+      "web_root_directory": "",
+      "continuous_deployment": false,
+      "memory": {
+        "required": 256,
+        "recommended": 256
+      },
+      "install_form_comment": "",
+      "first_run_url": "",
+      "installation_report": ""
+    },
+    "ports": [
+
+    ],
+    "scripts": {
+      "start": {
+        "language": "",
+        "content": ""
+      },
+      "install": {
+        "language": "",
+        "content": ""
+      },
+      "post_install": {
+        "language": "",
+        "content": ""
+      },
+      "shutdown": {
+        "language": "",
+        "content": ""
+      }
+    },
+    "external_repositories": [
+
+    ],
+    "system_packages": [
+
+    ],
+    "installed_packages": [
+      {
+        "name": "openid_connect_sample",
+        "source_url": "https://github.com/nov/openid_connect_sample",
+        "destination": "./",
+        "extraction_command": "git",
+        "path_to_extracted": "openid_connect_sample"
+      }
+    ],
+    "required_modules": [
+
+    ],
+    "service_configurations": [
+
+    ],
+    "environment_variables": [
+
+    ],
+    "template_files": [
+      {
+        "path": "config/connect/id_token/issuer.yml",
+        "language": "text",
+        "content": "development: &defaults\r\n  issuer: http://op.dev\r\n\r\ntest:\r\n  <<: *defaults\r\n\r\nproduction:\r\n  <<: *defaults\r\nissuer: https://_Engines_Builder(fqdn)"
+      }
+    ],
+    "replacement_strings": [
+
+    ],
+    "database_seed": {
+      "language": "",
+      "content": "",
+      "script": false
+    },
+    "file_write_permissions": [
+
+    ],
+    "persistent_directories": [
+
+    ],
+    "persistent_files": [
+
+    ],
+    "components": {
+      "path": "",
+      "extract": false,
+      "sources": [
+
+      ]
+    },
+    "workers": {
+      "blocking": "",
+      "commands": [
+
+      ]
+    },
+    "rake_tasks": [
+      {
+        "action": "db:migrate",
+        "always_run": true
+      },
+      {
+        "action": "db:seed",
+        "always_run": false
+      }
+    ],
+    "custom_php_inis": [
+
+    ],
+    "apache_htaccess_files": [
+
+    ],
+    "apache_httpd_configurations": [
+
+    ],
+    "actionators": [
+
+    ],
+    "schedules": [
+
+    ]
+  }
+}
