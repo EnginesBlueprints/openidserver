@@ -29,7 +29,7 @@
         "url": ""
       }
     },
-    "timestamp": "2017-05-03 04:27:55 UTC"
+    "timestamp": "2017-05-03 04:36:22 UTC"
   },
   "software": {
     "base": {
@@ -88,7 +88,20 @@
 
     ],
     "service_configurations": [
-
+      {
+        "publisher_namespace": "EnginesSystem",
+        "type_path": "database/sql/mysql",
+        "variables": {
+          "db_flavor": "mysql2",
+          "db_password": "_Engines_System(random(10))",
+          "collation": "utf8_general_ci",
+          "full_access": "false",
+          "name": "_Engines_Builder(engine_name)",
+          "database_host": "_Engines_System(mysql_host)",
+          "db_username": "_Engines_Builder(engine_name)",
+          "database_name": "_Engines_Builder(engine_name)"
+        }
+      }
     ],
     "environment_variables": [
 
@@ -96,8 +109,8 @@
     "template_files": [
       {
         "path": "config/connect/id_token/issuer.yml",
-        "content": "development: &defaults\r\n  issuer: http://op.dev\r\n\r\ntest:\r\n  <<: *defaults\r\n\r\nproduction:\r\n  <<: *defaults\r\nissuer: https://_Engines_Builder(fqdn)",
-        "language": "text"
+        "language": "text",
+        "content": "development: &defaults\r\n  issuer: http://op.dev\r\n\r\ntest:\r\n  <<: *defaults\r\n\r\nproduction:\r\n  <<: *defaults\r\nissuer: https://_Engines_Builder(fqdn)"
       }
     ],
     "replacement_strings": [
