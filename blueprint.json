@@ -29,7 +29,7 @@
         "url": ""
       }
     },
-    "timestamp": "2017-05-03 04:45:07 UTC"
+    "timestamp": "2017-05-03 04:49:44 UTC"
   },
   "software": {
     "base": {
@@ -115,7 +115,7 @@
     ],
     "replacement_strings": [
       {
-        "string": "/pg/s/mysql2/",
+        "string": "/pg/s/mysql2//",
         "source_file": "Gemfile",
         "destination_file": "Gemfile"
       }
