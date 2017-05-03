@@ -29,7 +29,7 @@
         "url": ""
       }
     },
-    "timestamp": "2017-05-03 05:07:21 UTC"
+    "timestamp": "2017-05-03 05:29:53 UTC"
   },
   "software": {
     "base": {
@@ -115,7 +115,11 @@
       }
     ],
     "replacement_strings": [
-
+      {
+        "string": "/serve_static_assets/s//serve_static_files/",
+        "source_file": "config/environments/production.rb",
+        "destination_file": "config/environments/production.rb"
+      }
     ],
     "database_seed": {
       "language": "",
