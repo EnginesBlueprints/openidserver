@@ -29,7 +29,7 @@
         "url": ""
       }
     },
-    "timestamp": "2017-05-03 04:25:22 UTC"
+    "timestamp": "2017-05-03 04:27:55 UTC"
   },
   "software": {
     "base": {
@@ -96,8 +96,8 @@
     "template_files": [
       {
         "path": "config/connect/id_token/issuer.yml",
-        "language": "text",
-        "content": "development: &defaults\r\n  issuer: http://op.dev\r\n\r\ntest:\r\n  <<: *defaults\r\n\r\nproduction:\r\n  <<: *defaults\r\nissuer: https://_Engines_Builder(fqdn)"
+        "content": "development: &defaults\r\n  issuer: http://op.dev\r\n\r\ntest:\r\n  <<: *defaults\r\n\r\nproduction:\r\n  <<: *defaults\r\nissuer: https://_Engines_Builder(fqdn)",
+        "language": "text"
       }
     ],
     "replacement_strings": [
