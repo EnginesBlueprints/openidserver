@@ -29,7 +29,7 @@
         "url": ""
       }
     },
-    "timestamp": "2017-05-03 04:56:38 UTC"
+    "timestamp": "2017-05-03 05:07:21 UTC"
   },
   "software": {
     "base": {
@@ -90,16 +90,17 @@
     "service_configurations": [
       {
         "publisher_namespace": "EnginesSystem",
-        "type_path": "database/sql/mysql",
+        "type_path": "database/sql/pgsql",
         "variables": {
-          "db_flavor": "mysql2",
-          "db_password": "_Engines_System(random(10))",
-          "collation": "utf8_general_ci",
+          "collation": "C",
+          "encoding": "ascii",
+          "dbpassword": "_Engines_System(random(10))",
           "full_access": "false",
-          "name": "_Engines_Builder(engine_name)",
-          "database_host": "_Engines_System(mysql_host)",
-          "db_username": "_Engines_Builder(engine_name)",
-          "database_name": "_Engines_Builder(engine_name)"
+          "rails_flavor": "postgres",
+          "database_host": "_Engines_System(pgsql_host)",
+          "database_name": "_Engines_Builder(engine_name)",
+          "db_flavor": "pgsql",
+          "dbusername": "_Engines_Builder(engine_name)"
         }
       }
     ],
@@ -114,11 +115,7 @@
       }
     ],
     "replacement_strings": [
-      {
-        "string": "/pg/s//mysql2/",
-        "source_file": "Gemfile",
-        "destination_file": "Gemfile"
-      }
+
     ],
     "database_seed": {
       "language": "",
